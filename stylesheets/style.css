@@ -1,0 +1,59 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+video {
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+#v1 {
+  animation: v1animation 1s infinite;
+}
+
+@keyframes v1animation {
+  0% {
+    -webkit-clip-path: ellipse(0px 100px at 150px 150px);
+  }
+
+  25% {
+    -webkit-clip-path: ellipse(100px 150px at 150px 150px);
+  }
+
+  50% {
+    -webkit-clip-path: ellipse(150px 150px at 150px 150px);
+  }
+
+  75% {
+    -webkit-clip-path: ellipse(150px 100px at 150px 150px);
+  }
+
+  100% {
+    -webkit-clip-path: ellipse(100px 0px at 150px 150px);
+  }
+}
+
+#v2 {
+  animation: v2animation 10s infinite;
+}
+
+/* v2 animation is added via javascript */
+
+#v3 {
+  animation: v3animation .5s ease-in-out infinite;
+}
+
+@keyframes v3animation {
+  0% {
+    transform: rotate(0) scale(.3);
+  }
+
+  50% {
+    transform: rotate(180deg) scale(.9);
+  }
+
+  100% {
+    transform: rotate(360deg) scale(.3);
+  }
+}
